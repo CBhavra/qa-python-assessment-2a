@@ -75,13 +75,12 @@ def two(num):
     # What happens if you multiply a string by a number?
 
 def three(a):
+    a = str(a)
     a2 = a*2
     a3 = a*3
     a4 = a*4
-    add = a + a2 + a3 + a4
-    if a == str(a):
-        return add
-
+    add = int(a) + int(a2) + int(a3) + int(a4)
+    return add
     # <QUESTION 4>
 
     # Given two Strings of equal length, 'merge' them into one String.
@@ -201,7 +200,9 @@ def seven(a, b, c):
     # Use the cli to access the documentation help(str.replace)
 
 def eight(string, num):
-    return ""
+    string.replace((len(string)/2), num)
+
+
 
     # <QUESTION 9>
 
