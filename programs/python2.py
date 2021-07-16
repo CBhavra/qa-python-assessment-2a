@@ -52,10 +52,11 @@ def one(string):
     # Use your CLI to access the Python documentation and get help manipulating strings - help(range).
 
 def two(num):
-    if num % 1 == num and num % num == 1:
-        return True
-    else:
-        return False 
+    if num > 1:
+        if num % 1 == 0:
+            return False 
+        else:
+            return True 
     
     
 
@@ -74,7 +75,12 @@ def two(num):
     # What happens if you multiply a string by a number?
 
 def three(a):
-    return 'a' + (2*'a') + (3*'a') + (4*'a') 
+    a2 = a*2
+    a3 = a*3
+    a4 = a*4
+    add = a + a2 + a3 + a4
+    if a == str(a):
+        return add
 
     # <QUESTION 4>
 
@@ -121,12 +127,12 @@ def four(string1, string2):
 
 def five():
     import random
-    for i in range(5):
-        even = random.randint(100, 201)
-        if even % 2 == 0:
-            return even 
-        else: 
-            pass  
+    randlist = []
+    n = random.randint(100, 201)
+    for i in range(0, 5):
+        if n % 2 == 0:
+            randlist.append(n)
+    return randlist 
 
     # <QUESTION 6>
 
@@ -172,7 +178,12 @@ def six(string):
     # Use the cli to access the documentation help(list.sort)
 
 def seven(a, b, c):
-    return False
+    list = [a, b, c]
+    list.sort(reverse=True)
+    if abs(list[0] - list[1]) == abs(list[1] - list[2]):
+        return True 
+    else:
+        return False 
 
     # <QUESTION 8>
 
